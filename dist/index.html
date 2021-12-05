@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400;1,700&display=swap"
+        rel="stylesheet">
+<script defer src="main.bundle.js"></script></head>
+<body>
+    
+    <div class="wrapper">
+        <header>
+            <div class="left-side">
+                <span class="logo"></span>
+                <p class="draft-user">Draft in Username</p>
+                <p class="state-editing">Saved</p>
+            </div>
+            <div class="right-side">
+                <a href="#" class="btn-publish">Publish</a>
+                <span class="btn-circle"><svg class="svgIcon-use" width="25" height="25">
+                        <path
+                            d="M5 12.5c0 .552.195 1.023.586 1.414.39.39.862.586 1.414.586.552 0 1.023-.195 1.414-.586.39-.39.586-.862.586-1.414 0-.552-.195-1.023-.586-1.414A1.927 1.927 0 007 10.5c-.552 0-1.023.195-1.414.586-.39.39-.586.862-.586 1.414zm5.617 0c0 .552.196 1.023.586 1.414.391.39.863.586 1.414.586.552 0 1.023-.195 1.414-.586.39-.39.586-.862.586-1.414 0-.552-.195-1.023-.586-1.414a1.927 1.927 0 00-1.414-.586c-.551 0-1.023.195-1.414.586-.39.39-.586.862-.586 1.414zm5.6 0c0 .552.195 1.023.586 1.414.39.39.868.586 1.432.586.551 0 1.023-.195 1.413-.586.391-.39.587-.862.587-1.414 0-.552-.196-1.023-.587-1.414a1.927 1.927 0 00-1.413-.586c-.565 0-1.042.195-1.432.586-.39.39-.586.862-.587 1.414z"
+                            fill-rule="evenodd"></path>
+                    </svg></span>
+                <span class="notifications"><i class="large material-icons">notifications_none</i></span>
+                <span class="user-init">A</span>
+            </div>
+        </header>
+
+
+        <section class="editable-content">
+
+            <div id="editor" contenteditable="true"><span class="fix-placeholder">Title</span></div>
+            <div id="editor1" contenteditable="true">
+                <span class="fix-placeholder-content">Tell your story…</span>
+            </div>
+            <br><br>
+
+
+
+             <div class="highlight-menu">
+                <div class="highlight-menu-inner">
+                    <div class="button-set">
+                        <button id="make-bold"><i class="material-icons">format_bold</i></button>
+                        <button id="make-italic"><i class="material-icons">format_italic</i></button>
+                        <button id="make-link"><i class="material-icons">insert_link</i></button>
+                        <div class="button-set-separator"></div>
+                        <button id="make-xl-size"><i class="material-icons">format_size</i></button>
+                        <button id="make-lt-size"><i class="material-icons">format_size</i></button>
+                        <button id="make-link1"><i class="material-icons">insert_link</i></button>
+                        <div class="button-set-separator"></div>
+                        <button id="make-note"><i class="material-icons">speaker_notes</i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="highlight-menu menu-close">
+                <div class="highlight-menu-inner">
+                    <div class="button-set">
+                        <button id="make-bold"><i class="material-icons">format_bold</i></button>
+                        <button id="make-italic"><i class="material-icons">format_italic</i></button>
+                        <button id="make-link"><i class="material-icons">insert_link</i></button>
+                        <div class="button-set-separator"></div>
+                        <button id="make-xl-size"><i class="material-icons">format_size</i></button>
+                        <button id="make-lt-size"><i class="material-icons">format_size</i></button>
+                        <button id="make-link1"><i class="material-icons">insert_link</i></button>
+                        <div class="button-set-separator"></div>
+                        <button id="make-note"><i class="material-icons">speaker_notes</i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="overlay overlay--white" id="modal-history">
+            <div class="overlay-dialog">
+                <div class="overlay-content">
+                    <form class="content-dialog">
+                        <button class="btn btn-close">x</button>
+                        <div class="left-content">
+                            <p class="title-side">Story Preview</p>
+                            <div class="recomended-side">
+                                <p>Include a high-quality image in your story to make it more inviting to readers.</p>
+                            </div>
+                            <div class="input-content input-title">
+                                <input type="text" name="title-story" value="">
+                            </div>
+                            <div class="input-content input-descr">
+                                <input type="text" name="descr-story" value="">
+                            </div>
+                            <p class="note">
+                                <strong>Note:</strong> Changes here will affect how your story appears in public places like JMediumS homepage and in subscribers’ inboxes — not the contents of the story itself.
+                            </p>
+                        </div>
+                        <div class="right-content">
+                            <p class="author-story">Publishing to: <strong>Your Name</strong></p>
+                            <p class="descr-info">Add or change tags (up to 5) so readers know what your story is about</p>
+                            <div class="input-story">
+                                <!-- <input type="text" placeholder="Add a tag..."> -->
+                                <select id="news-tag" required>
+                                    <option selected="true" value="any" disabled>Add a tag...</option>
+                                    <option value="JavaScript">JavaScript</option>
+                                    <option value="IT">IT</option>
+                                    <option value="Medicine">Medicine</option>
+                                    <option value="Business">Business</option>
+                                    <option value="Education">Education</option>
+                                    <option value="Technologies">Technologies</option>
+                                    <option value="Relationship">Relationship</option>
+                                    <option value="Machine Learning">Machine Learning</option>
+                                </select>
+                            </div>
+                            <p class="about-tags"><a href="#">Learn more</a> about what happens to your post when you publish.</p>
+                            <div class="btn-box">
+                                <button class="publish-now"><a href="./lists_news.html">Publish now</a></button>
+                                <button class="shedule">Shedule for later</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>
