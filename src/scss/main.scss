@@ -1,0 +1,298 @@
+.wrapper{
+    max-width: 1072px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+input {
+    outline:none;
+}
+
+:active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    .left-side{
+        display: flex;
+        align-items: center;
+        .logo{
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: #000;
+            border-radius: 50%;
+        }
+        .draft-user{
+            color: rgba(0,0,0,.84);
+            font-size: 16px;
+            letter-spacing: 0;
+            font-weight: 400;
+            font-style: normal;
+            margin-left: 10px;
+        }
+        .state-editing{
+            margin-left: 18px;
+            color: rgba(0,0,0,.54);
+        }
+    }
+    .right-side{
+        display: flex;
+        height: 65px;
+        align-items: center;
+        .btn-publish{
+            background: #1a8917;
+            height: 25px;
+            line-height: 25px;
+            padding: 0 6px;
+            text-decoration: none;
+            border: 1px solid rgba(0,0,0,.15);
+            border-radius: 99em;
+            color: #fff;
+            font-size: 13px;
+            margin-left: 8px;
+            margin-right: 8px;
+        }
+        .btn-circle{
+            margin-left: 8px;
+            margin-right: 8px;
+        }
+        .notifications{
+            margin-right: 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            .search-btn{
+                margin-right: 5px;
+            }
+            .search-input{
+                position: relative;
+                #searchInput{
+                   /*  background-color: red; */
+                    color: rgba(41, 41, 41, 1);
+                    transition: width 140ms ease-in 0s, padding 140ms ease-in 0s;
+                    width: 182px;
+                    font-size: 20px;
+                    height: 34px;
+                    
+                    &::-webkit-input-placeholder{
+                        color: rgba(0, 0, 0, 0.54);
+                        }
+                    &::-moz-placeholder{
+                        color: rgba(0, 0, 0, 0.54);
+                        }
+                            
+                    &:-ms-input-placeholder{
+                        color: rgba(0, 0, 0, 0.54);
+                    }
+	
+                }
+                #searchInput.open-search{
+                    width: 0;
+                }
+                #search-list{
+                    &.hide-search{
+                        display: none;
+                    }
+                    list-style-type: none;
+                    width: 250px;
+                    /* height: 600px; */
+                    height: auto;
+                    position: absolute;
+                    left: -55px;
+                    box-shadow: rgb(230, 230, 230) 0px 1px 4px;
+                    border: 1px solid rgba(230, 230, 230, 1);
+                    background: #fff;
+                    li{
+                        a{
+                            text-decoration: none;
+                        }
+                        &.head-item{
+                            margin-bottom: 20px;
+                        }
+                        &.search-item{
+                            margin: 20px 0;
+                        }
+                        padding: 0 20px;
+                        .search-title{
+                           
+                            .search-descr{
+                                display: flex;
+                                justify-content: space-between;
+                                border-bottom: 1px solid rgba(117, 117, 117, 1);
+                                padding-bottom: 5px;
+                                padding-top: 15px;
+                                .public{
+                                    color: rgba(117, 117, 117, 1);
+                                    font-size: 13px;
+                                }
+                                .more{
+                                    font-size: 13px;
+                                    a{
+                                        color: rgba(25, 25, 25, 1);
+                                        text-decoration: none;
+                                    }
+                                }
+                            }
+                        }
+                        .item{
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            .item-pict{
+                                display: inline-flex;
+                                width: 32px;
+                                height: 32px;
+                                background: aquamarine;
+                                align-items: center;
+                                justify-content: center;
+                                border-radius: 50%;
+                                color: #fff;
+                            }
+                            .item-title{
+                                width: 170px;
+                                color: rgba(41, 41, 41, 1);
+                                font-size: 14px;
+                                line-height: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .user-init{
+            display: inline-flex;
+            width: 32px;
+            height: 32px;
+            background: aquamarine;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            color: #fff;
+        }
+    }    
+}
+
+.editable-content{
+    position: relative;
+    max-width: 740px;
+    margin: 0 auto;
+    width: 100%;
+   /*  padding-top: 50px; */
+    line-height: 1.25;
+
+    font-family: 'Playfair Display', serif;
+    #editor{
+        padding-top:50px;
+       
+        font-size: 42px;
+        .fix-placeholder{
+            color: #b3b3b1;
+            font-weight: 400;
+            line-height: 1.25;
+            font-size: 42px;
+            font-family: 'Playfair Display', serif;
+        }
+    }
+    #editor1{
+        margin-top: 20px;
+        font-size: 21px;
+        .fix-placeholder-content, .fix-placeholder{
+            color: #b3b3b1;
+            font-size: 21px;
+            line-height: 1.58;
+            letter-spacing: -.003em;
+            font-family: 'Playfair Display', serif;
+        }
+        
+    }
+
+    .highlight-menu{
+        position: absolute;
+        top: 20px;
+        width: 255px;
+        height: 27px;
+        padding: 8px;
+        border-radius: 5px;
+        padding: 8px 10px;
+        background-image: linear-gradient(to bottom,rgba(49,49,47,.99),#262625);
+        &-inner{
+            .button-set{
+                display: flex;
+                justify-content: space-between;
+                &-separator{
+                    display: inline-block;
+                    vertical-align: middle;
+                    width: 1px;
+                    margin: 0 6px;
+                    height: 24px;
+                    background: rgba(255,255,255,.2);
+                }
+                #make-lt-size{
+                    i{
+                        font-size: 18px;
+                        width: 24px;
+                    }
+                }
+                button{
+                    color:#fff;
+                    background: linear-gradient(to bottom, rgba(49, 49, 47, 0.99), #262625);
+                    cursor: pointer;
+                }
+                
+            }
+        }
+        
+    }
+    .menu-close{
+        display: none;
+    }
+    .menu-open{
+        display: block;
+    }
+    
+}
+
+
+
+/*CSS Styles*/
+
+.strong-style{
+    font-weight: bold;
+}
+
+.italic-style{
+    font-style: italic;
+}
+
+.small-letters{
+    font-size: 16px;
+}
+
+.big-letters{
+    font-size: 32px;
+}
+
+.normal-letters{
+    font-size: 21px;
+    font-weight: initial;
+    font-style: initial;
+}
+
+@import "style-lists-news.scss";
+@import "style-modal-edit.scss";
+@import "style-news-page.scss";
+@import "login.scss";

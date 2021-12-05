@@ -1,0 +1,73 @@
+#container-news{
+    max-width: 680px;
+        margin: 0 auto;
+    overflow-wrap: break-word;
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  h1{
+    font-size: 48px;
+    line-height: 60px;
+    font-family: 'Playfair Display', serif;
+    font-weight: normal;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .author-story{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    .action-left{
+        display: flex;
+        .logo-author{
+            display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        width: 48px;
+        height: 48px;
+        background: aquamarine;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        border-radius: 50%;
+        color: #fff;
+        }
+        .author-info{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            margin-left: 5px;
+            .username{
+                font-size: 13px;
+            }
+            .follow{
+                font-size: 13px;
+    padding: 5px;
+    background: red;
+    border-radius: 30px;
+    background: rgb(0, 155, 150);
+    color: #fff;
+    text-decoration: none;
+            }
+            .date{
+                color: rgba(117, 117, 117, 1);
+        font-size: 13px;
+            
+            }
+        }
+    }
+    
+}
+  .content{
+    font-size: 21px;
+    line-height: 32px;
+    font-family: charter, Georgia, Cambria, "Times New Roman", Times, serif;
+    color: rgba(41, 41, 41, 1);
+    letter-spacing: -0.003em;
+  }
+}
